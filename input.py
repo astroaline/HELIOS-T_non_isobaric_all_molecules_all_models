@@ -54,7 +54,7 @@ wavenumber=True     # True if opacity given in terms of wavenumber, False if wav
 
 priors = {"T": [2700, 200], "log_xh2o": [13,-13], "log_xch4": [13,-13], "log_xco": [13,-13],
           "log_P0": [4,-1], "R0": [2*r0_uncertainty, r0-r0_uncertainty], "log_tau_ref": [7,-5], "Q0": [99,1], "a": [4,3],
-          "log_r_c": [3,-5], "log_p_cia": [3,-3], "log_P_cloudtop": [5,-3], "log_cloud_depth": [1,0],
+          "log_r_c": [6,-7], "log_p_cia": [3,-3], "log_P_cloudtop": [5,-3], "log_cloud_depth": [1,0],
           "Rstar": [2*rstar_uncertainty,rstar-rstar_uncertainty],
           "G": [2*g_uncertainty,g-g_uncertainty], "line": [5,0]} # priors for all possible parameters
 
