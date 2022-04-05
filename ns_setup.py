@@ -18,16 +18,16 @@ class Priors:
              
                 i = parameters.index(param)
 
-                if param == 'G':    # set gaussian priors for planet gravity
+                if param == 'G':    # set gaussian priors for planetary gravity
                     try:
-                        cube[i]=pri.GaussianPrior(cube[i],g,g_uncertainty)
+                        cube[i] = pri.GaussianPrior(cube[i], g, g_uncertainty)
                     except:
-                        cube[i]=pri.GaussianPrior(cube[i],g,(g_uperr+g_loerr)/2)
-                elif param == 'Rstar':    # set gaussian priors for star radius
+                        cube[i] = pri.GaussianPrior(cube[i], g, (g_uperr + g_loerr)/2)
+                elif param == 'Rstar':    # set gaussian priors for stellar radius
                     try:
-                        cube[i]=pri.GaussianPrior(cube[i],rstar,rstar_uncertainty)
+                        cube[i] = pri.GaussianPrior(cube[i], rstar, rstar_uncertainty)
                     except:
-                        cube[i]=pri.GaussianPrior(cube[i],rstar,(rstar_uperr+rstar_loerr)/2)
+                        cube[i] = pri.GaussianPrior(cube[i], rstar, (rstar_uperr + rstar_loerr)/2)
                 else:
                     cube[i] = cube[i]*priors[param][0] + priors[param][1]  # set uniform priors based on values in input
 
